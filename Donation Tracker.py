@@ -6,6 +6,5 @@ tree = html.fromstring(page.content)
 #This will find the goal amount
 goal = tree.xpath('//span[@class="amount-raised-value"]/text()')
 #This prints the currently raised amount out of the total goal
-#Total goal amount can be omitted or edited freely
 with open("donation.txt", "w") as text_file:
-    print(goal,'/$10000', file=text_file)
+    print(goal,'/$10000', sep="", file=text_file)
